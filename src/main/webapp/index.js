@@ -1,4 +1,3 @@
-
 var calculator = function () {
     var a = document.forms["mainForm"]["a"].value;
     var b = document.forms["mainForm"]["b"].value;
@@ -19,8 +18,7 @@ var calculator = function () {
                         if (resultArray[0] === "") {
                             addRow("Don't have any roots");
                             break;
-                        }
-                        else {
+                        } else {
                             var x = "x = " + resultArray[0];
                             addRow(x);
                             break;
@@ -35,7 +33,7 @@ var calculator = function () {
                 }
             }
         })
-    } else return false;
+    } else alert("You input incorrect data.");
 
     function addRow(data) {
         var row = "<tr onclick='deleteRow(this)'><td class='equation-column'>"
